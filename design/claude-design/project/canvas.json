@@ -1,0 +1,184 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-08T06:30:00Z"
+  },
+  "title": "들꽃 웨딩페어 랜딩 & 신청자 관리",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 5000,
+      "title": "1a. 기본 랜딩 · PC",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "FairLanding.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 4600,
+      "title": "1b. 회차 랜딩 · PC",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "Complete.dc.html": {
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 1500,
+      "title": "3. 신청 완료 · PC (제출 직후)",
+      "expand": "fill"
+    },
+    "Privacy.dc.html": {
+      "x": 4560,
+      "y": 0,
+      "w": 1440,
+      "h": 2300,
+      "title": "4. 개인정보 처리방침 · PC",
+      "expand": "fill"
+    },
+    "LandingMobile.dc.html": {
+      "x": 0,
+      "y": 5400,
+      "w": 390,
+      "h": 7400,
+      "title": "1a. 기본 랜딩 · 모바일"
+    },
+    "FairMobile.dc.html": {
+      "x": 470,
+      "y": 5400,
+      "w": 390,
+      "h": 4300,
+      "title": "1b. 회차 랜딩 · 모바일"
+    },
+    "CompleteMobile.dc.html": {
+      "x": 940,
+      "y": 5400,
+      "w": 390,
+      "h": 1300,
+      "title": "3. 신청 완료 · 모바일 (요약 없는 기본 상태)"
+    },
+    "FormStates.dc.html": {
+      "x": 0,
+      "y": 13200,
+      "w": 1440,
+      "h": 1900,
+      "title": "2. 신청 폼 상태 · 입력 오류 / 제출 중 / 서버 오류"
+    },
+    "EmptyStates.dc.html": {
+      "x": 1520,
+      "y": 13200,
+      "w": 1440,
+      "h": 1300,
+      "title": "1a·1b 예외 상태 · 회차 없음 / 회차 종료·비공개"
+    },
+    "Tokens.dc.html": {
+      "x": 3040,
+      "y": 13200,
+      "w": 1440,
+      "h": 1500,
+      "title": "디자인 토큰"
+    },
+    "Components.dc.html": {
+      "x": 4560,
+      "y": 13200,
+      "w": 1440,
+      "h": 2100,
+      "title": "기본 컴포넌트 · 상태별"
+    },
+    "Dashboard.dc.html": {
+      "x": 0,
+      "y": 15700,
+      "w": 1440,
+      "h": 1300,
+      "title": "5. 관리자 신청 현황판 (Payload 안)",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "DashboardEmpty.dc.html": {
+      "x": 1520,
+      "y": 15700,
+      "w": 1440,
+      "h": 900,
+      "title": "5. 관리자 현황판 · 데이터 없음",
+      "expand": "fill"
+    },
+    "PrivacyMobile.dc.html": {
+      "x": 1410,
+      "y": 5400,
+      "w": 390,
+      "h": 1900,
+      "title": "4. 개인정보 처리방침 · 모바일"
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "FairLanding.dc.html",
+    "Complete.dc.html",
+    "Privacy.dc.html",
+    "LandingMobile.dc.html",
+    "FairMobile.dc.html",
+    "CompleteMobile.dc.html",
+    "PrivacyMobile.dc.html",
+    "FormStates.dc.html",
+    "EmptyStates.dc.html",
+    "Tokens.dc.html",
+    "Components.dc.html",
+    "Dashboard.dc.html",
+    "DashboardEmpty.dc.html"
+  ],
+  "notes": {
+    "rowPc": {
+      "x": 0,
+      "y": -300,
+      "text": "방문자 화면 · PC 1440",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "rowMobile": {
+      "x": 0,
+      "y": 5100,
+      "text": "방문자 화면 · 모바일 390",
+      "kind": "title1",
+      "maxW": 1800
+    },
+    "rowStates": {
+      "x": 0,
+      "y": 12900,
+      "text": "상태 · 토큰 · 컴포넌트",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "rowAdmin": {
+      "x": 0,
+      "y": 15400,
+      "text": "관리자 (Payload 기본 스타일)",
+      "kind": "title1",
+      "maxW": 2960
+    },
+    "copyNote": {
+      "x": 1880,
+      "y": 5400,
+      "w": 420,
+      "fill": "orange",
+      "size": "m",
+      "text": "시안 표기 규칙\n\n· [예시] 표시: 회차 이름·날짜·장소·혜택·시간대처럼 실제 값이 없는 자리예요.\n· [대괄호]만 있는 값(상호·주소·연락처 등)은 운영자가 Payload에 넣어요.\n· 수량·금액·할인율·누적 신청자 수 같은 숫자는 넣지 않았어요.\n· 관리자 현황판의 숫자는 모두 0, 이름·시각은 [예시]예요.\n· 동의문 전문은 '[법률 검토 중인 동의문 자리]', 처리방침 본문은 '[운영자 입력·법률 검토 필요]'로만 두었어요.\n· 사진 자리는 회색 상자 + 설명 문구예요."
+    },
+    "mobileNote": {
+      "x": 1880,
+      "y": 6160,
+      "w": 420,
+      "fill": "teal",
+      "size": "m",
+      "text": "모바일 하단 고정 버튼\n\n높이 56px. 화면 아래에 늘 보이고, #apply 신청 폼 섹션이 화면에 들어오면 숨겨요. 페이지 맨 아래에는 같은 높이(56px + 안전 영역)의 여백을 둬요.\n\n1a 모바일 시안에서 폼 위치에 '이 구간에서는 버튼 바 숨김' 표시를 해 두었어요."
+    }
+  },
+  "designSystems": []
+}

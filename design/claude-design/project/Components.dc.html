@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>기본 컴포넌트 상태</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Pretendard";src:url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2-variations"),url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2");font-weight:45 920;font-display:swap}
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1440px; min-height: 2100px; box-sizing: border-box; padding: 56px; background: #FBF8F3; color: #2B2A26; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.6; word-break: keep-all; display: flex; flex-direction: column; gap: 32px">
+<div>
+<h1 style="margin: 0 0 6px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px">기본 컴포넌트 · 상태별</h1>
+<p style="margin: 0; color: #5E5A52">컴포넌트마다 CSS Module 하나로 옮겨요. 선택·오류 상태는 색과 함께 아이콘·글자·테두리 두께로도 구분해요.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: 150px repeat(6, minmax(0, 1fr)); column-gap: 16px; row-gap: 0; background: #FFFFFF; border-radius: 12px; padding: 8px 24px 24px">
+<!-- 머리 -->
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">컴포넌트</div>
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">기본</div>
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">hover</div>
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">focus (키보드)</div>
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">선택·열림</div>
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">오류</div>
+<div style="padding: 14px 0; font-size: 14px; font-weight: 700; color: #5E5A52; border-bottom: 1px solid #D9D1C3">비활성</div>
+
+<!-- 주 버튼 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">주 버튼</p><p style="margin: 0; font-size: 13px; color: #5E5A52">높이 48–56</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-weight: 600">신청하기</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 8px; background: #3B523B; color: #FFFFFF; font-weight: 600">신청하기</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-weight: 600; outline: 2px solid #2E4A31; outline-offset: 2px">신청하기</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 8px; background: #3B523B; color: #FFFFFF; font-weight: 600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 1 1-8.5 8.5"></path></svg>보내는 중</span><p style="margin: 4px 0 0; font-size: 13px; color: #5E5A52">제출 중</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 8px; background: #E4DED3; color: #5E5A52; font-weight: 600">신청하기</span></div>
+
+<!-- 보조 버튼 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">보조 버튼</p><p style="margin: 0; font-size: 13px; color: #5E5A52">테두리형</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; border-radius: 8px; border: 1px solid #4A6549; color: #4A6549; background: #FFFFFF; font-weight: 600">회차 보기</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; border-radius: 8px; border: 1px solid #3B523B; color: #3B523B; background: #EFE7D8; font-weight: 600">회차 보기</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; border-radius: 8px; border: 1px solid #4A6549; color: #4A6549; background: #FFFFFF; font-weight: 600; outline: 2px solid #2E4A31; outline-offset: 2px">회차 보기</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; border-radius: 8px; border: 1px solid #D9D1C3; color: #5E5A52; background: #F6F2EB; font-weight: 600">회차 보기</span></div>
+
+<!-- 입력칸 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">입력칸</p><p style="margin: 0; font-size: 13px; color: #5E5A52">라벨 항상 보임</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0 0 6px; font-size: 14px; font-weight: 500">이름</p><div style="height: 48px; border: 1px solid #8C8578; border-radius: 8px; background: #FFFFFF"></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0 0 6px; font-size: 14px; font-weight: 500">이름</p><div style="height: 48px; border: 1px solid #2B2A26; border-radius: 8px; background: #FFFFFF"></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0 0 6px; font-size: 14px; font-weight: 500">이름</p><div style="height: 48px; border: 1px solid #4A6549; border-radius: 8px; background: #FFFFFF; outline: 2px solid #2E4A31; outline-offset: 2px; display: flex; align-items: center; padding-left: 14px"><span style="width: 1px; height: 22px; background: #2B2A26"></span></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0 0 6px; font-size: 14px; font-weight: 500">이름</p><div style="height: 48px; border: 1px solid #8C8578; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; padding-left: 14px">[입력값]</div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0 0 6px; font-size: 14px; font-weight: 500">휴대폰 번호</p><div style="height: 48px; border: 2px solid #B3261E; border-radius: 8px; background: #FFFFFF; box-sizing: border-box"></div><p style="margin: 6px 0 0; display: flex; gap: 4px; color: #B3261E; font-size: 13px; font-weight: 500"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 2px"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.3"></path></svg>형식을 확인해 주세요</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0 0 6px; font-size: 14px; font-weight: 500; color: #5E5A52">예식 예정일</p><div style="height: 48px; border: 1px solid #D9D1C3; border-radius: 8px; background: #F3EFE8; display: flex; align-items: center; padding-left: 14px; color: #5E5A52; font-size: 14px">미정 선택됨</div></div>
+
+<!-- 선택 목록 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">선택 목록</p><p style="margin: 0; font-size: 13px; color: #5E5A52">기본 select</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="height: 48px; border: 1px solid #8C8578; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 15px; color: #5E5A52">선택해 주세요<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2A26" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="height: 48px; border: 1px solid #2B2A26; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 15px; color: #5E5A52">선택해 주세요<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2A26" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="height: 48px; border: 1px solid #4A6549; border-radius: 8px; background: #FFFFFF; outline: 2px solid #2E4A31; outline-offset: 2px; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 15px; color: #5E5A52">선택해 주세요<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2A26" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="height: 48px; border: 1px solid #8C8578; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 15px">경기<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2A26" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="height: 48px; border: 2px solid #B3261E; box-sizing: border-box; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 15px; color: #5E5A52">회차를 골라 주세요<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2A26" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div><p style="margin: 6px 0 0; color: #B3261E; font-size: 13px; font-weight: 500">! 회차를 골라 주세요</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="height: 48px; border: 1px solid #D9D1C3; border-radius: 8px; background: #F3EFE8; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; font-size: 15px; color: #5E5A52">선택 불가<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5E5A52" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+
+<!-- 체크박스 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">체크박스</p><p style="margin: 0; font-size: 13px; color: #5E5A52">22px, 누르는 영역 48</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; display: flex; gap: 8px; align-items: center; font-size: 15px"><span style="width: 22px; height: 22px; box-sizing: border-box; border: 2px solid #8C8578; border-radius: 4px; background: #FFFFFF"></span>동의해요</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; display: flex; gap: 8px; align-items: center; font-size: 15px"><span style="width: 22px; height: 22px; box-sizing: border-box; border: 2px solid #2B2A26; border-radius: 4px; background: #FBF8F3"></span>동의해요</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; display: flex; gap: 8px; align-items: center; font-size: 15px"><span style="width: 22px; height: 22px; box-sizing: border-box; border: 2px solid #8C8578; border-radius: 4px; background: #FFFFFF; outline: 2px solid #2E4A31; outline-offset: 2px"></span>동의해요</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; display: flex; gap: 8px; align-items: center; font-size: 15px"><span style="width: 22px; height: 22px; border-radius: 4px; background: #4A6549; display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>동의해요</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="display: flex; gap: 8px; align-items: center; font-size: 15px"><span style="width: 22px; height: 22px; box-sizing: border-box; border: 2px solid #B3261E; border-radius: 4px; background: #FFFFFF"></span>동의해요</div><p style="margin: 6px 0 0; color: #B3261E; font-size: 13px; font-weight: 500">! 동의해 주세요</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; display: flex; gap: 8px; align-items: center; font-size: 15px; color: #5E5A52"><span style="width: 22px; height: 22px; box-sizing: border-box; border: 2px solid #D9D1C3; border-radius: 4px; background: #F3EFE8"></span>동의해요</div>
+
+<!-- 칩 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">칩</p><p style="margin: 0; font-size: 13px; color: #5E5A52">관심 분야, aria-pressed</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #8C8578; background: #FFFFFF; font-size: 15px; font-weight: 500">스드메</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #2B2A26; background: #EFE7D8; font-size: 15px; font-weight: 500">스드메</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #8C8578; background: #FFFFFF; font-size: 15px; font-weight: 500; outline: 2px solid #2E4A31; outline-offset: 2px">스드메</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #4A6549; background: #4A6549; color: #FFFFFF; font-size: 15px; font-weight: 500"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>스드메</span></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 2px solid #B3261E; background: #FFFFFF; font-size: 15px; font-weight: 500">[1일차]</span><p style="margin: 6px 0 0; color: #B3261E; font-size: 13px; font-weight: 500">! 날짜를 골라 주세요</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><span style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #D9D1C3; background: #F3EFE8; color: #5E5A52; font-size: 15px; font-weight: 500">스드메</span></div>
+
+<!-- 아코디언 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">아코디언</p><p style="margin: 0; font-size: 13px; color: #5E5A52">FAQ, 동의 전문</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border-top: 1px solid #D9D1C3; border-bottom: 1px solid #D9D1C3; min-height: 52px; display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: 15px">주차할 수 있나요?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border-top: 1px solid #D9D1C3; border-bottom: 1px solid #D9D1C3; min-height: 52px; display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: 15px; color: #4A6549; text-decoration: underline">주차할 수 있나요?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="min-height: 52px; display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: 15px; outline: 2px solid #2E4A31; outline-offset: 2px; border-radius: 4px">주차할 수 있나요?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border-top: 1px solid #D9D1C3; border-bottom: 1px solid #D9D1C3; padding-bottom: 10px"><div style="min-height: 52px; display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: 15px">주차할 수 있나요?<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg></div><p style="margin: 0; font-size: 14px; color: #5E5A52">[주차 안내]</p></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">해당 없음</div>
+
+<!-- 카드 -->
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><p style="margin: 0; font-weight: 700">회차 카드</p><p style="margin: 0; font-size: 13px; color: #5E5A52">카드 안 버튼이 대상</p></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border: 1px solid #D9D1C3; border-radius: 12px; padding: 14px; box-shadow: 0 2px 10px rgba(43,42,38,0.05)"><p style="margin: 0; font-weight: 700; font-size: 15px">[예시] 회차 이름</p><p style="margin: 0; font-size: 13px; color: #5E5A52">[예시] 개최일 · [예시] 장소명</p></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border: 1px solid #8C8578; border-radius: 12px; padding: 14px; box-shadow: 0 6px 18px rgba(43,42,38,0.10)"><p style="margin: 0; font-weight: 700; font-size: 15px">[예시] 회차 이름</p><p style="margin: 0; font-size: 13px; color: #5E5A52">[예시] 개최일 · [예시] 장소명</p></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border: 1px solid #D9D1C3; border-radius: 12px; padding: 14px"><p style="margin: 0; font-weight: 700; font-size: 15px">[예시] 회차 이름</p><p style="margin: 4px 0 0; display: inline-block; font-size: 13px; font-weight: 600; color: #4A6549; outline: 2px solid #2E4A31; outline-offset: 2px; border-radius: 4px; padding: 0 4px">이 회차 신청</p></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3"><div style="border: 2px solid #4A6549; border-radius: 12px; padding: 13px"><p style="margin: 0; display: flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: #4A6549"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>선택한 회차</p><p style="margin: 0; font-weight: 700; font-size: 15px">[예시] 회차 이름</p></div></div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0; border-bottom: 1px solid #D9D1C3; font-size: 13px; color: #5E5A52">노출하지 않음<br>(종료·비공개 회차)</div>
+
+<!-- 하단 고정 버튼 바 -->
+<div style="padding: 24px 0"><p style="margin: 0; font-weight: 700">하단 고정 버튼 바</p><p style="margin: 0; font-size: 13px; color: #5E5A52">모바일 · 높이 56 이상</p></div>
+<div style="padding: 24px 0"><div style="padding: 8px 10px; background: #FBF8F3; border-top: 1px solid #D9D1C3"><span style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-weight: 600">참가 신청하기</span></div></div>
+<div style="padding: 24px 0"><div style="padding: 8px 10px; background: #FBF8F3; border-top: 1px solid #D9D1C3"><span style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 8px; background: #3B523B; color: #FFFFFF; font-weight: 600">참가 신청하기</span></div><p style="margin: 4px 0 0; font-size: 13px; color: #5E5A52">눌렀을 때(active)</p></div>
+<div style="padding: 24px 0"><div style="padding: 8px 10px; background: #FBF8F3; border-top: 1px solid #D9D1C3"><span style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-weight: 600; outline: 2px solid #2E4A31; outline-offset: 2px">참가 신청하기</span></div></div>
+<div style="padding: 24px 0; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0; font-size: 13px; color: #5E5A52">해당 없음</div>
+<div style="padding: 24px 0"><div style="height: 72px; border: 1px dashed #8C8578; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #5E5A52; text-align: center">숨김<br>(폼 섹션이 보일 때)</div></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2100}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

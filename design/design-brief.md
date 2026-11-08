@@ -3,6 +3,7 @@
 작성일: 2026-11-08 (같은 날 미정 항목 기획 반영)
 근거: `.moai/project/product.md`, `.moai/project/structure.md`, `.moai/project/interview.md`, 2026-11-08 디자인 범위 문답, MoAI 기획 에이전트 결정안(사용자가 결정을 위임함)
 함께 쓰는 문서: [claude-design-prompt.md](claude-design-prompt.md) (이 브리프를 Claude Design 지시문으로 옮긴 것)
+완성 시안: [claude-design/](claude-design/README.md) (Claude Design 캔버스 원본 사본과 화면 목록)
 
 표시 규칙
 - **[운영자 입력]**: 실제 사업 정보라 운영자가 Payload CMS에 넣는 값이다. 시안에서는 자리 표시로 둔다.

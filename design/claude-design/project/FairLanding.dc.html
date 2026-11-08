@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>회차 랜딩 PC</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Pretendard";src:url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2-variations"),url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2");font-weight:45 920;font-display:swap}
+body{margin:0;background:#FBF8F3}
+html{scroll-behavior:smooth}
+a{color:#4A6549}a:hover{color:#3B523B}
+:focus-visible{outline:2px solid #2E4A31;outline-offset:2px}
+input::placeholder{color:#5E5A52}
+</style>
+</helmet>
+<div style="min-height: 100%; background: #FBF8F3; color: #2B2A26; font-family: Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 16px; line-height: 1.7; word-break: keep-all">
+
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(251,248,243,0.96); border-bottom: 1px solid #D9D1C3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px">
+<a href="Main.dc.html" style="display: inline-flex; align-items: center; gap: 8px; height: 32px; text-decoration: none; color: #4A6549">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A6549" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"></path><path d="M5 19c3-4 6-7 10-9.5"></path></svg>
+<span style="font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 22px; line-height: 32px">들꽃 웨딩페어</span><span style="font-family: Pretendard, sans-serif; font-size: 14px; font-weight: 500; color: #5E5A52">[가칭]</span>
+</a>
+<nav aria-label="주요 메뉴" style="flex: 1 1 auto">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px; font-weight: 500">
+<li><a href="#benefits" style="color: #2B2A26; text-decoration: none">참가 혜택</a></li>
+<li><a href="#location" style="color: #2B2A26; text-decoration: none">오시는 길</a></li>
+<li><a href="#faq" style="color: #2B2A26; text-decoration: none">자주 묻는 질문</a></li>
+</ul>
+</nav>
+<a href="#apply" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 22px; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">참가 신청하기</a>
+</div>
+</header>
+
+<main>
+<!-- 회차 히어로: 회차 이름·날짜·장소가 주인공 -->
+<section aria-labelledby="fair-title" style="background: #4A6549; color: #FFFFFF; padding: 64px 24px 72px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; padding: 4px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.7); font-size: 14px; font-weight: 600">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>신청 받는 중</p>
+<h1 id="fair-title" style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 48px; line-height: 1.3; letter-spacing: -0.02em">[예시] 회차 이름 A</h1>
+<p style="margin: 0; font-size: 18px; color: #F1EEE6">[회차 히어로 헤드라인 · 비어 있으면 공통 헤드라인] 웨딩홀부터 허니문까지, 이번 회차에서 한 번에 상담받아 보세요.</p>
+<dl style="margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid rgba(255,255,255,0.35); border-bottom: 1px solid rgba(255,255,255,0.35)">
+<div style="padding: 18px 16px 18px 0; display: flex; flex-direction: column; gap: 4px">
+<dt style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: #F1EEE6"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 9.5h17M8 3v4M16 3v4"></path></svg>날짜</dt>
+<dd style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.45">[예시] 0000.00.00(토)<br>– 00.00(일)</dd>
+</div>
+<div style="padding: 18px 16px; border-left: 1px solid rgba(255,255,255,0.35); display: flex; flex-direction: column; gap: 4px">
+<dt style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: #F1EEE6"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>시간</dt>
+<dd style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.45">[예시] 운영 시간</dd>
+</div>
+<div style="padding: 18px 16px; border-left: 1px solid rgba(255,255,255,0.35); display: flex; flex-direction: column; gap: 4px">
+<dt style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: #F1EEE6"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"></path><circle cx="12" cy="10" r="2.3"></circle></svg>장소</dt>
+<dd style="margin: 0; font-size: 19px; font-weight: 700; line-height: 1.45">[예시] 장소명 A</dd>
+</div>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<a href="#apply" style="display: inline-flex; align-items: center; gap: 8px; min-height: 56px; padding: 0 28px; border-radius: 8px; background: #FFFFFF; color: #3B523B; font-weight: 700; font-size: 17px; text-decoration: none">이 회차 참가 신청하기
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#location" style="color: #FFFFFF; font-weight: 600">오시는 길 보기</a>
+</div>
+</div>
+<div role="img" aria-label="사진 자리: 회차 장소 전경" style="flex: 1 1 440px; height: 460px; border-radius: 12px; background: #E4E2DD; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; padding: 24px; box-sizing: border-box">
+<span style="font-size: 15px; font-weight: 600; color: #2B2A26">사진 자리 · 회차 히어로 이미지</span>
+<span style="font-size: 14px; color: #5E5A52">이 회차 장소의 전경이나 야외 예식 공간. 비어 있으면 기본 배너 사진을 써요 [운영자 입력]</span>
+</div>
+</div>
+</section>
+
+<!-- 혜택: 회차 값 우선 -->
+<section id="benefits" aria-labelledby="benefits-title" style="padding: 88px 24px">
+<div style="max-width: 1200px; margin: 0 auto">
+<h2 id="benefits-title" style="margin: 0 0 8px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px; line-height: 1.4">이번 회차 참가 혜택</h2>
+<p style="margin: 0 0 32px; color: #5E5A52">[예시] 회차 이름 A에 방문해 주신 분께 준비한 혜택이에요.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<li style="background: #FFFFFF; border: 1px solid #D9D1C3; border-radius: 12px; padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start">
+<span style="flex: 0 0 48px; height: 48px; border-radius: 999px; background: #EFE7D8; display: inline-flex; align-items: center; justify-content: center; color: #4A6549"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1.5"></rect><path d="M3 9h18M12 9v11M12 9c-1.5-3.5-5-4.5-5.5-2.5S9 9 12 9zm0 0c1.5-3.5 5-4.5 5.5-2.5S15 9 12 9z"></path></svg></span>
+<div><h3 style="margin: 0 0 4px; font-size: 19px; font-weight: 700">[예시] 방문 기념품</h3><p style="margin: 0; color: #5E5A52; font-size: 15px">방문해 주신 분께 작은 기념품을 드려요.</p></div>
+</li>
+<li style="background: #FFFFFF; border: 1px solid #D9D1C3; border-radius: 12px; padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start">
+<span style="flex: 0 0 48px; height: 48px; border-radius: 999px; background: #EFE7D8; display: inline-flex; align-items: center; justify-content: center; color: #4A6549"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="14.5" r="6"></circle><path d="M9.5 4.5h5l1.5 2.5-4 3-4-3z"></path></svg></span>
+<div><h3 style="margin: 0 0 4px; font-size: 19px; font-weight: 700">[예시] 현장 계약 혜택</h3><p style="margin: 0 0 8px; color: #5E5A52; font-size: 15px">업체별로 준비한 계약 혜택을 현장에서 안내해 드려요.</p><p style="margin: 0; display: inline-block; font-size: 14px; font-weight: 600; color: #4A6549; border: 1px solid #8C8578; border-radius: 999px; padding: 1px 12px">조건 · 현장 계약 시</p></div>
+</li>
+<li style="background: #FFFFFF; border: 1px solid #D9D1C3; border-radius: 12px; padding: 28px 24px; display: flex; gap: 16px; align-items: flex-start">
+<span style="flex: 0 0 48px; height: 48px; border-radius: 999px; background: #EFE7D8; display: inline-flex; align-items: center; justify-content: center; color: #4A6549"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l1.8 5.2 5.2 1.8-5.2 1.8L12 17.5l-1.8-5.2-5.2-1.8 5.2-1.8z"></path><path d="M18.5 16v4M16.5 18h4"></path></svg></span>
+<div><h3 style="margin: 0 0 4px; font-size: 19px; font-weight: 700">[예시] 회차 한정 이벤트</h3><p style="margin: 0; color: #5E5A52; font-size: 15px">이번 회차에서만 진행하는 현장 이벤트를 안내해 드려요.</p></div>
+</li>
+</ul>
+<p style="margin: 20px 0 0; font-size: 14px; color: #5E5A52">혜택 내용은 업체에 따라 달라질 수 있어요.</p>
+</div>
+</section>
+
+<!-- 오시는 길 -->
+<section id="location" aria-labelledby="loc-title" style="padding: 88px 24px; background: #EFE7D8">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+<div style="flex: 1 1 320px">
+<h2 id="loc-title" style="margin: 0 0 8px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px; line-height: 1.4">오시는 길</h2>
+<p style="margin: 0; color: #5E5A52">지도 앱에서 길 찾기를 이용해 주세요.</p>
+</div>
+<div style="flex: 999 1 560px; background: #FFFFFF; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; gap: 14px; align-items: flex-start">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A6549" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 3px"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"></path><circle cx="12" cy="10" r="2.3"></circle></svg>
+<div><p style="margin: 0; font-weight: 700; font-size: 19px">[예시] 장소명 A</p><p style="margin: 0; color: #2B2A26">[도로명 주소 · 운영자 입력]</p></div>
+</div>
+<div style="border-top: 1px solid #D9D1C3; padding-top: 20px; color: #5E5A52; font-size: 15px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0"><strong style="color: #2B2A26">대중교통</strong> [가까운 역·정류장과 걷는 길 안내]</p>
+<p style="margin: 0"><strong style="color: #2B2A26">주차</strong> [주차 가능 여부와 안내]</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://map.naver.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 8px; border: 1px solid #4A6549; color: #4A6549; background: #FFFFFF; font-weight: 600; text-decoration: none">네이버 지도에서 보기
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+<a href="https://map.kakao.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 8px; border: 1px solid #4A6549; color: #4A6549; background: #FFFFFF; font-weight: 600; text-decoration: none">카카오맵에서 보기
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg></a>
+</div>
+<p style="margin: 0; font-size: 14px; color: #5E5A52">링크를 누르면 새 창에서 지도 서비스가 열려요.</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ (공통, 덮어쓰지 않음) -->
+<section id="faq" aria-labelledby="faq-title" style="padding: 88px 24px">
+<div style="max-width: 880px; margin: 0 auto">
+<h2 id="faq-title" style="margin: 0 0 24px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px; line-height: 1.4">자주 묻는 질문</h2>
+<div style="border-top: 1px solid #D9D1C3">
+<sc-for list="{{faqs}}" as="q" hint-placeholder-count="4">
+<div style="border-bottom: 1px solid #D9D1C3">
+<h3 style="margin: 0">
+<button type="button" aria-expanded="{{q.expanded}}" aria-controls="{{q.panelId}}" onClick="{{q.toggle}}" style="width: 100%; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 4px; background: none; border: 0; text-align: left; font: inherit; font-size: 17px; font-weight: 600; color: #2B2A26; cursor: pointer">
+<span>{{q.q}}</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="{{q.chevron}}"><path d="M6 9l6 6 6-6"></path></svg>
+</button>
+</h3>
+<sc-if value="{{q.open}}" hint-placeholder-val="{{false}}"><div id="{{q.panelId}}" style="padding: 0 4px 20px; color: #5E5A52; font-size: 15px">{{q.a}}</div></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- 신청 폼: 회차 미리 선택 -->
+<section id="apply" aria-labelledby="apply-title" style="padding: 96px 24px; background: #EFE7D8">
+<div style="max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<div>
+<h2 id="apply-title" style="margin: 0 0 8px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px; line-height: 1.4">[예시] 회차 이름 A 참가 신청</h2>
+<p style="margin: 0; color: #5E5A52">회원가입 없이 신청할 수 있어요. <strong style="color: #2B2A26">필수</strong> 항목만 입력해도 신청이 끝나요.</p>
+</div>
+<form aria-labelledby="apply-title" style="background: #FFFFFF; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 24px; box-shadow: 0 2px 10px rgba(43,42,38,0.05)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; background: #FBF8F3; border: 1px solid #D9D1C3; border-radius: 8px; padding: 16px 18px">
+<div>
+<p style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #4A6549">신청 회차 <span style="font-size: 13px; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span> <span style="font-weight: 500; color: #5E5A52">· 미리 선택됨</span></p>
+<p style="margin: 0; font-weight: 700; font-size: 17px">[예시] 회차 이름 A · [예시] 0000.00.00(토) – 00.00(일) · [예시] 장소명 A</p>
+</div>
+<a href="Main.dc.html#fairs" style="font-size: 15px; font-weight: 500">다른 회차 보기</a>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="g-name" style="display: flex; align-items: center; gap: 8px; font-weight: 500">이름 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="g-name" type="text" autocomplete="name" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit; background: #FFFFFF">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="g-phone" style="display: flex; align-items: center; gap: 8px; font-weight: 500">휴대폰 번호 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="g-phone" type="tel" inputmode="numeric" placeholder="010-0000-0000" aria-describedby="g-phone-hint" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit; background: #FFFFFF">
+<p id="g-phone-hint" style="margin: 0; font-size: 14px; color: #5E5A52">숫자만 입력해도 010-0000-0000 형식으로 맞춰져요.</p>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p id="g-date-label" style="margin: 0; display: flex; align-items: center; gap: 8px; font-weight: 500">희망 방문 날짜 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></p>
+<div role="group" aria-labelledby="g-date-label" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{dateOpts}}" as="d" hint-placeholder-count="2">
+<button type="button" aria-pressed="{{d.pressed}}" onClick="{{d.pick}}" style="{{d.style}}"><sc-if value="{{d.on}}" hint-placeholder-val="{{false}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></sc-if>{{d.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<details style="border-top: 1px solid #D9D1C3; padding-top: 20px">
+<summary style="min-height: 44px; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; cursor: pointer">선택 정보 입력하기 <span style="font-weight: 500; font-size: 14px; color: #5E5A52">시간대·예식 예정일·지역·인원·관심 분야 (1a와 같은 항목)</span></summary>
+<p style="margin: 8px 0 0; font-size: 14px; color: #5E5A52">입력하지 않으셔도 신청할 수 있어요.</p>
+</details>
+
+<div style="border-top: 1px solid #D9D1C3; padding-top: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="border: 1px solid #D9D1C3; border-radius: 8px; background: #FBF8F3; min-height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-weight: 600">
+<span>개인정보 수집·이용 동의 전문 보기</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+</div>
+<label for="g-consent" style="display: flex; align-items: center; gap: 12px; min-height: 48px; font-weight: 500; cursor: pointer">
+<input id="g-consent" type="checkbox" style="width: 22px; height: 22px; margin: 0; accent-color: #4A6549">
+<span>개인정보 수집·이용에 동의해요</span>
+<span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span>
+</label>
+</div>
+<a href="Complete.dc.html" style="display: flex; align-items: center; justify-content: center; min-height: 56px; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-size: 17px; font-weight: 600; text-decoration: none">신청하기</a>
+</form>
+</div>
+</section>
+</main>
+
+<footer style="background: #2B2A26; color: #FBF8F3; padding: 56px 24px 64px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 22px">들꽃 웨딩페어 <span style="font-family: Pretendard, sans-serif; font-size: 14px; font-weight: 500">[가칭]</span></p>
+<p style="margin: 0; font-size: 14px; line-height: 1.8; color: #E4DED3">상호 [운영자 상호] · 대표 [대표자명] · 사업자등록번호 [000-00-00000]<br>주소 [사업장 주소] · 문의 [연락처]</p>
+</div>
+<nav aria-label="푸터 메뉴"><a href="Privacy.dc.html" style="color: #FBF8F3; font-weight: 600; font-size: 15px">개인정보 처리방침</a></nav>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4600}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { date: -1, faqOpen: -1 };
+  }
+  renderVals() {
+    const s = this.state;
+    const base = 'min-height: 44px; padding: 0 16px; border-radius: 8px; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;';
+    const on = 'background: #4A6549; color: #FFFFFF; border: 1px solid #4A6549;';
+    const off = 'background: #FFFFFF; color: #2B2A26; border: 1px solid #8C8578;';
+    const days = ['[1일차] 00.00(토)', '[2일차] 00.00(일)'];
+    const faqData = [
+      ['회원가입을 해야 하나요?', '아니요. 이 페이지의 신청서에 필수 항목만 입력하시면 신청이 끝나요.'],
+      ['혼자 방문해도 되나요?', '네, 혼자 오셔도 괜찮아요. 신청서의 방문 인원에서 1명을 골라 주세요.'],
+      ['주차할 수 있나요?', '[운영자 입력] 회차 장소의 주차 안내를 적어 주세요.'],
+      ['입력한 개인정보는 어디에 쓰이나요?', '방문 신청 접수와 방문 관련 안내 연락에만 써요. 참가 업체를 포함한 제3자에게 제공하지 않아요.']
+    ];
+    return {
+      dateOpts: days.map((label, i) => ({ label, on: s.date === i, pressed: s.date === i ? 'true' : 'false', style: base + (s.date === i ? on : off), pick: () => this.setState({ date: i }) })),
+      faqs: faqData.map((q, i) => ({ q: q[0], a: q[1], open: s.faqOpen === i, expanded: s.faqOpen === i ? 'true' : 'false', panelId: 'gfaq-' + i, chevron: 'flex: 0 0 auto; transform: rotate(' + (s.faqOpen === i ? 180 : 0) + 'deg)', toggle: () => this.setState({ faqOpen: s.faqOpen === i ? -1 : i }) }))
+    };
+  }
+}
+</script>
+</body>
+</html>

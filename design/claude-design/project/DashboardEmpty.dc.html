@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>관리자 현황판 데이터 없음</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#141414}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="min-height: 100%; background: #FFFFFF; color: #141414; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; font-size: 14px; line-height: 1.5; display: flex; flex-wrap: wrap">
+<nav aria-label="관리자 메뉴" style="flex: 1 1 220px; max-width: 260px; min-width: 200px; background: #F5F5F5; border-right: 1px solid #E5E5E5; padding: 24px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="height: 28px; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px"><span aria-hidden="true" style="width: 24px; height: 24px; border-radius: 4px; background: #141414"></span>[관리자 로고]</div>
+<div><p style="margin: 0 0 6px; font-size: 12px; font-weight: 600; color: #595959">현황</p><a href="#" aria-current="page" style="display: block; padding: 6px 10px; margin: 0 -10px; border-radius: 4px; background: #E5E5E5; font-weight: 600; text-decoration: none">신청 현황</a></div>
+<div><p style="margin: 0 0 6px; font-size: 12px; font-weight: 600; color: #595959">컬렉션</p><a href="#" style="display: block; padding: 6px 0; text-decoration: none">신청자</a><a href="#" style="display: block; padding: 6px 0; text-decoration: none">회차</a><a href="#" style="display: block; padding: 6px 0; text-decoration: none">관리자 계정</a></div>
+</nav>
+<main style="flex: 999 1 640px; min-width: 0; padding: 0 40px 48px; box-sizing: border-box">
+<div style="height: 60px; display: flex; align-items: center; border-bottom: 1px solid #E5E5E5; margin: 0 -40px 32px; padding: 0 40px"><p style="margin: 0; color: #595959">대시보드 / <span style="color: #141414; font-weight: 600">신청 현황</span></p></div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px">
+<h1 style="margin: 0; font-size: 32px; font-weight: 600">신청 현황</h1>
+<div style="display: flex; gap: 12px; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px"><label for="de-fair" style="font-size: 13px; font-weight: 600">회차</label>
+<select id="de-fair" style="min-width: 260px; height: 40px; padding: 0 10px; border: 1px solid #C7C7C7; border-radius: 4px; background: #FFFFFF; font: inherit"><option>[예시] 회차 이름 C · 진행 예정</option></select></div>
+<button type="button" disabled="" style="height: 40px; padding: 0 16px; border-radius: 4px; border: 1px solid #C7C7C7; background: #F5F5F5; color: #595959; font: inherit; font-weight: 600">CSV 내려받기</button>
+</div>
+</div>
+<div style="border: 1px dashed #C7C7C7; border-radius: 4px; padding: 56px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#595959" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M8 9h8M8 13h5"></path></svg>
+<h2 style="margin: 0; font-size: 18px; font-weight: 600">이 회차에는 아직 신청이 없어요</h2>
+<p style="margin: 0; max-width: 460px; color: #595959">신청이 들어오면 상태별 수, 유입 경로, 최근 신청이 여기에 나타나요. 회차가 랜딩에 보이는지 먼저 확인해 보세요.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 6px">
+<a href="#" style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 4px; border: 1px solid #141414; text-decoration: none; font-weight: 600">회차 공개 상태 확인</a>
+<a href="FairLanding.dc.html" style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 4px; border: 1px solid #C7C7C7; text-decoration: none">회차 랜딩 열기</a>
+</div>
+</div>
+<p style="margin: 16px 0 0; font-size: 13px; color: #595959">신청 0건일 때 CSV 내려받기는 비활성으로 두고, 상태 카드 대신 이 안내 하나만 보여요.</p>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

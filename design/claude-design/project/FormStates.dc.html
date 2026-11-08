@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>신청 폼 상태</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Pretendard";src:url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2-variations"),url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2");font-weight:45 920;font-display:swap}
+body{margin:0}
+a{color:#4A6549}a:hover{color:#3B523B}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</helmet>
+<div style="width: 1440px; min-height: 1900px; box-sizing: border-box; padding: 56px; background: #EFE7D8; color: #2B2A26; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.7; word-break: keep-all; display: flex; flex-direction: column; gap: 32px">
+<div>
+<h1 style="margin: 0 0 6px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px">신청 폼 상태</h1>
+<p style="margin: 0; color: #5E5A52">오류 문구는 해당 항목 바로 아래, 아이콘과 글자로 표시해요. 색만으로 구분하지 않아요.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start">
+
+<!-- 1. 입력 오류 -->
+<section aria-labelledby="s1" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="s1" style="margin: 0; font-size: 19px; font-weight: 700">① 입력 오류 <span style="font-weight: 500; font-size: 15px; color: #5E5A52">제출을 눌렀을 때</span></h2>
+<form style="background: #FFFFFF; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div role="alert" style="border: 2px solid #B3261E; border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; display: flex; align-items: center; gap: 8px; color: #B3261E; font-weight: 700"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.3"></path></svg>입력한 내용을 확인해 주세요</p>
+<ul style="margin: 0; padding-left: 28px; font-size: 15px"><li><a href="#e-phone">휴대폰 번호</a></li><li><a href="#e-date">희망 방문 날짜</a></li><li><a href="#e-consent">개인정보 수집·이용 동의</a></li></ul>
+<p style="margin: 0; font-size: 14px; color: #5E5A52">항목 이름을 누르면 해당 칸으로 이동해요. 첫 오류 칸으로 초점이 옮겨져요.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="e-name" style="display: flex; align-items: center; gap: 8px; font-weight: 500">이름 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="e-name" type="text" value="[입력한 이름]" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="e-phone" style="display: flex; align-items: center; gap: 8px; font-weight: 500">휴대폰 번호 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="e-phone" type="tel" value="010-123" aria-invalid="true" aria-describedby="e-phone-err" style="min-height: 48px; padding: 0 14px; border: 2px solid #B3261E; border-radius: 8px; font: inherit">
+<p id="e-phone-err" style="margin: 0; display: flex; gap: 6px; align-items: flex-start; color: #B3261E; font-size: 14px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 2px"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.3"></path></svg>휴대폰 번호 11자리를 010-0000-0000 형식으로 입력해 주세요.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p id="e-date-l" style="margin: 0; display: flex; align-items: center; gap: 8px; font-weight: 500">희망 방문 날짜 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></p>
+<div id="e-date" role="group" aria-labelledby="e-date-l" aria-describedby="e-date-err" style="display: flex; gap: 8px">
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 8px; border: 2px solid #B3261E; background: #FFFFFF; font: inherit; font-size: 15px">[1일차] 00.00(토)</button>
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 14px; border-radius: 8px; border: 2px solid #B3261E; background: #FFFFFF; font: inherit; font-size: 15px">[2일차] 00.00(일)</button>
+</div>
+<p id="e-date-err" style="margin: 0; display: flex; gap: 6px; align-items: flex-start; color: #B3261E; font-size: 14px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 2px"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.3"></path></svg>방문하실 날짜를 골라 주세요.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #D9D1C3; padding-top: 16px">
+<label for="e-consent" style="display: flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 500"><input id="e-consent" type="checkbox" aria-invalid="true" aria-describedby="e-consent-err" style="width: 22px; height: 22px; margin: 0; outline: 2px solid #B3261E; outline-offset: 1px">개인정보 수집·이용에 동의해요 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<p id="e-consent-err" style="margin: 0; display: flex; gap: 6px; align-items: flex-start; color: #B3261E; font-size: 14px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 2px"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.3"></path></svg>신청하려면 개인정보 수집·이용에 동의해 주세요.</p>
+</div>
+<button type="submit" style="min-height: 56px; border: 0; border-radius: 8px; background: #4A6549; color: #FFFFFF; font: inherit; font-size: 17px; font-weight: 600">신청하기</button>
+</form>
+</section>
+
+<!-- 2. 제출 중 -->
+<section aria-labelledby="s2" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="s2" style="margin: 0; font-size: 19px; font-weight: 700">② 제출 중 <span style="font-weight: 500; font-size: 15px; color: #5E5A52">중복 제출 막기</span></h2>
+<form aria-busy="true" style="background: #FFFFFF; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="b-name" style="font-weight: 500">이름 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="b-name" type="text" value="[입력한 이름]" readonly="" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit; background: #F6F2EB; color: #2B2A26">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="b-phone" style="font-weight: 500">휴대폰 번호 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="b-phone" type="tel" value="010-0000-0000" readonly="" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit; background: #F6F2EB; color: #2B2A26">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-weight: 500">희망 방문 날짜 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></p>
+<div style="display: flex; gap: 8px"><span style="min-height: 44px; padding: 0 14px; border-radius: 8px; background: #4A6549; color: #FFFFFF; display: inline-flex; align-items: center; gap: 6px; font-size: 15px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>[1일차] 00.00(토)</span></div>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 500; border-top: 1px solid #D9D1C3; padding-top: 16px"><input type="checkbox" checked="" disabled="" style="width: 22px; height: 22px; margin: 0; accent-color: #4A6549">개인정보 수집·이용에 동의해요</label>
+<button type="submit" disabled="" aria-disabled="true" style="min-height: 56px; border: 0; border-radius: 8px; background: #3B523B; color: #FFFFFF; font: inherit; font-size: 17px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: progress">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" style="animation: spin 1s linear infinite"><path d="M12 3.5a8.5 8.5 0 1 1-8.5 8.5"></path></svg>신청을 보내고 있어요</button>
+<p role="status" style="margin: -8px 0 0; font-size: 14px; color: #5E5A52; text-align: center">창을 닫지 말고 잠시만 기다려 주세요.</p>
+</form>
+</section>
+
+<!-- 3. 서버 오류 -->
+<section aria-labelledby="s3" style="display: flex; flex-direction: column; gap: 14px">
+<h2 id="s3" style="margin: 0; font-size: 19px; font-weight: 700">③ 서버 오류 <span style="font-weight: 500; font-size: 15px; color: #5E5A52">입력값 유지</span></h2>
+<form style="background: #FFFFFF; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+<div role="alert" style="border: 2px solid #B3261E; border-radius: 8px; padding: 14px 16px; display: flex; gap: 10px; align-items: flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B3261E" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: 2px"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5v5.5M12 16.2v.3"></path></svg>
+<div><p style="margin: 0; color: #B3261E; font-weight: 700">신청을 보내지 못했어요</p><p style="margin: 0; font-size: 15px">입력하신 내용은 그대로 있어요. 잠시 후 아래 버튼으로 다시 신청해 주세요. 계속 안 되면 [연락처]로 알려 주세요.</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="x-name" style="font-weight: 500">이름 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="x-name" type="text" value="[입력한 이름]" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="x-phone" style="font-weight: 500">휴대폰 번호 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></label>
+<input id="x-phone" type="tel" value="010-0000-0000" style="min-height: 48px; padding: 0 14px; border: 1px solid #8C8578; border-radius: 8px; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-weight: 500">희망 방문 날짜 <span style="font-size: 13px; font-weight: 600; color: #4A6549; border: 1px solid #4A6549; border-radius: 4px; padding: 0 6px; line-height: 20px">필수</span></p>
+<div style="display: flex; gap: 8px"><span style="min-height: 44px; padding: 0 14px; border-radius: 8px; background: #4A6549; color: #FFFFFF; display: inline-flex; align-items: center; gap: 6px; font-size: 15px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>[1일차] 00.00(토)</span></div>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 500; border-top: 1px solid #D9D1C3; padding-top: 16px"><input type="checkbox" checked="" style="width: 22px; height: 22px; margin: 0; accent-color: #4A6549">개인정보 수집·이용에 동의해요</label>
+<button type="submit" style="min-height: 56px; border: 0; border-radius: 8px; background: #4A6549; color: #FFFFFF; font: inherit; font-size: 17px; font-weight: 600">다시 신청하기</button>
+</form>
+</section>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

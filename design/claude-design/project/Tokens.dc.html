@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>디자인 토큰</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Pretendard";src:url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2-variations"),url(/_blob/4e34703d802276d5ae2e18b8232a38cf) format("woff2");font-weight:45 920;font-display:swap}
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1440px; min-height: 1500px; box-sizing: border-box; padding: 56px; background: #FBF8F3; color: #2B2A26; font-family: Pretendard, 'Apple SD Gothic Neo', sans-serif; font-size: 16px; line-height: 1.6; word-break: keep-all; display: flex; flex-direction: column; gap: 40px">
+<div>
+<h1 style="margin: 0 0 6px; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px">디자인 토큰 · 방문자 화면</h1>
+<p style="margin: 0; color: #5E5A52">tokens.css(CSS 변수)로 옮겨 방문자 레이아웃에서만 불러와요. 관리자 화면에는 적용하지 않아요.</p>
+</div>
+
+<section aria-labelledby="t-color">
+<h2 id="t-color" style="margin: 0 0 16px; font-size: 20px; font-weight: 700">색</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{colors}}" as="c" hint-placeholder-count="14">
+<li style="background: #FFFFFF; border: 1px solid #D9D1C3; border-radius: 12px; overflow: hidden">
+<div style="{{c.sw}}"></div>
+<div style="padding: 10px 12px 12px">
+<p style="margin: 0; font-family: ui-monospace, Menlo, monospace; font-size: 13px; font-weight: 600">{{c.name}}</p>
+<p style="margin: 0; font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: #5E5A52">{{c.hex}}</p>
+<p style="margin: 4px 0 0; font-size: 13px; color: #5E5A52; line-height: 1.45">{{c.use}}</p>
+</div>
+</li>
+</sc-for>
+</ul>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px">
+<section aria-labelledby="t-contrast">
+<h2 id="t-contrast" style="margin: 0 0 16px; font-size: 20px; font-weight: 700">대비 (브리프 계산값)</h2>
+<table style="width: 100%; border-collapse: collapse; background: #FFFFFF; border-radius: 12px; overflow: hidden; font-size: 14px">
+<thead><tr style="background: #EFE7D8; text-align: left"><th scope="col" style="padding: 10px 14px">조합</th><th scope="col" style="padding: 10px 14px">견본</th><th scope="col" style="padding: 10px 14px">대비</th><th scope="col" style="padding: 10px 14px">기준</th></tr></thead>
+<tbody>
+<sc-for list="{{contrast}}" as="r" hint-placeholder-count="10">
+<tr style="border-top: 1px solid #D9D1C3"><td style="padding: 8px 14px; font-family: ui-monospace, Menlo, monospace; font-size: 13px">{{r.pair}}</td><td style="padding: 8px 14px"><span style="{{r.sample}}">가나 Aa</span></td><td style="padding: 8px 14px; font-weight: 700">{{r.ratio}}</td><td style="padding: 8px 14px; color: #5E5A52">{{r.min}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+<p style="margin: 10px 0 0; font-size: 14px; color: #5E5A52">--color-border(1.52), --color-accent-light(1.98)는 3:1 미만이라 장식에만 써요.</p>
+</section>
+
+<section aria-labelledby="t-type" style="display: flex; flex-direction: column; gap: 16px">
+<h2 id="t-type" style="margin: 0; font-size: 20px; font-weight: 700">글꼴</h2>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">히어로 제목 · Noto Serif KR 700 · PC 48 / 모바일 32</p><p style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 48px; line-height: 1.35">들꽃처럼 자연스럽게</p></div>
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">섹션 제목 · Noto Serif KR 600 · PC 32 / 모바일 24</p><p style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 600; font-size: 32px; line-height: 1.4">참가 혜택</p></div>
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">본문 · Pretendard 400 · 16 / 행간 1.7</p><p style="margin: 0; font-size: 16px; line-height: 1.7">웨딩홀부터 스드메, 혼수, 허니문까지 여러 분야의 상담을 한 번에 받아 보실 수 있어요.</p></div>
+<div style="display: flex; gap: 32px; flex-wrap: wrap">
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">라벨 · 500</p><p style="margin: 0; font-weight: 500">휴대폰 번호</p></div>
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">버튼 · 600</p><p style="margin: 0; font-weight: 600">참가 신청하기</p></div>
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">강조 · 700</p><p style="margin: 0; font-weight: 700">[회차 이름 A]</p></div>
+<div><p style="margin: 0; font-size: 13px; color: #5E5A52">보조 · 14 이상</p><p style="margin: 0; font-size: 14px; color: #5E5A52">입력하지 않으셔도 돼요.</p></div>
+</div>
+</div>
+
+<h2 style="margin: 8px 0 0; font-size: 20px; font-weight: 700">모양과 간격</h2>
+<div style="background: #FFFFFF; border-radius: 12px; padding: 24px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center"><div style="width: 96px; height: 48px; border: 1px solid #8C8578; border-radius: 8px"></div><p style="margin: 0; font-size: 13px; color: #5E5A52">입력칸 8px</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center"><div style="width: 96px; height: 64px; border: 1px solid #D9D1C3; border-radius: 12px; box-shadow: 0 2px 10px rgba(43,42,38,0.05)"></div><p style="margin: 0; font-size: 13px; color: #5E5A52">카드 12px + 그림자 1단계</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center"><div style="width: 96px; height: 40px; border: 1px solid #8C8578; border-radius: 999px"></div><p style="margin: 0; font-size: 13px; color: #5E5A52">칩 999px</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; gap: 6px; align-items: flex-end"><span style="width: 4px; height: 4px; background: #4A6549"></span><span style="width: 8px; height: 8px; background: #4A6549"></span><span style="width: 12px; height: 12px; background: #4A6549"></span><span style="width: 16px; height: 16px; background: #4A6549"></span><span style="width: 24px; height: 24px; background: #4A6549"></span><span style="width: 32px; height: 32px; background: #4A6549"></span><span style="width: 48px; height: 48px; background: #4A6549"></span></div><p style="margin: 0; font-size: 13px; color: #5E5A52">간격 4px 단위 · 4 8 12 16 24 32 48</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center"><span style="display: inline-flex; padding: 0 18px; min-height: 44px; align-items: center; border-radius: 8px; background: #4A6549; color: #FFFFFF; font-weight: 600; outline: 2px solid #2E4A31; outline-offset: 2px">초점</span><p style="margin: 0; font-size: 13px; color: #5E5A52">초점 링 2px · 간격 2px</p></div>
+</div>
+</section>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const c = [
+      ['--color-bg', '#FBF8F3', '페이지 배경'], ['--color-surface', '#FFFFFF', '카드, 폼 패널'], ['--color-secondary', '#EFE7D8', '베이지 섹션 배경'],
+      ['--color-text', '#2B2A26', '본문'], ['--color-text-muted', '#5E5A52', '보조 문구 14px 이상'], ['--color-primary', '#4A6549', '주 버튼, 링크'],
+      ['--color-primary-hover', '#3B523B', '주 버튼 hover·active'], ['--color-on-primary', '#FFFFFF', '주 버튼 글자'], ['--color-accent-light', '#A8B89A', '장식 전용'],
+      ['--color-border', '#D9D1C3', '장식 구분선, 카드 테두리'], ['--color-border-strong', '#8C8578', '입력칸·체크박스 테두리'], ['--color-error', '#B3261E', '오류 + 아이콘'],
+      ['--color-success', '#3D6B45', '성공 + 아이콘·글자'], ['--color-focus', '#2E4A31', '초점 링 2px']
+    ];
+    const r = [
+      ['text / bg', '#2B2A26', '#FBF8F3', '13.56', '4.5'], ['text-muted / bg', '#5E5A52', '#FBF8F3', '6.48', '4.5'], ['text-muted / secondary', '#5E5A52', '#EFE7D8', '5.59', '4.5'],
+      ['on-primary / primary', '#FFFFFF', '#4A6549', '6.46', '4.5'], ['on-primary / primary-hover', '#FFFFFF', '#3B523B', '8.55', '4.5'], ['primary / bg', '#4A6549', '#FBF8F3', '6.10', '4.5'],
+      ['error / surface', '#B3261E', '#FFFFFF', '6.54', '4.5'], ['success / bg', '#3D6B45', '#FBF8F3', '5.85', '4.5'], ['border-strong / surface', '#8C8578', '#FFFFFF', '3.66', '3 (비텍스트)'],
+      ['focus / bg', '#2E4A31', '#FBF8F3', '9.26', '3 (비텍스트)']
+    ];
+    return {
+      colors: c.map((x) => ({ name: x[0], hex: x[1], use: x[2], sw: 'height: 72px; background: ' + x[1] + '; border-bottom: 1px solid #D9D1C3;' })),
+      contrast: r.map((x) => ({ pair: x[0], ratio: x[3], min: x[4], sample: 'display: inline-block; padding: 2px 10px; border-radius: 4px; font-weight: 600; color: ' + x[1] + '; background: ' + x[2] + '; border: 1px solid #D9D1C3;' }))
+    };
+  }
+}
+</script>
+</body>
+</html>
