@@ -1,0 +1,19 @@
+# .moai/project/harness-spec.yaml — machine-readable harness generation input
+# Generated from .moai/project/interview.md (2026-11-08). Overwritten on re-run.
+
+domain: wedding-fair-lead-capture
+goal: "웨딩페어 방문 신청을 랜딩페이지에서 받고, 관리자가 Payload 관리자 화면에서 신청자를 확인·분류·내보내기한다"
+constraints:
+  - "개인정보 수집·이용 동의 필수"
+  - "배포처 미정 — 특정 호스팅에 묶이지 않는 구성"
+  - "Windows 개발 환경, PostgreSQL은 Docker로 실행"
+  - "Node.js 업그레이드 필요 (현재 v14.16.1)"
+  - "첫 버전에서 외부 유료 서비스 사용 안 함"
+  - "개인정보 보관 기간 제안: 회차 종료일로부터 3개월 [법률 검토 필요]"
+scope: "범위 안: 기본 랜딩(/)과 회차 랜딩(/fairs/[slug]), 신청 폼(필수 5개)·저장, 신청 완료 화면, 개인정보 처리방침 페이지, 관리자 화면(신청자·회차·랜딩 공통+회차 덮어쓰기 콘텐츠), 상태·메모, CSV 내보내기, 휴대폰 번호 가림, UTM 기록, 중복 표시, 스팸 방지. 범위 밖: 알림 발송, 시간대 정원, 신청자 로그인, 결제, 자동 파기, 배포 자동화, 지도 임베드, 참가 업체 목록, 제3자 제공"
+
+verification: "Vitest(단위) + Playwright(신청 → 관리자 확인 E2E)"
+external_systems:
+  - PostgreSQL
+ui_surface: has-ui
+team_sharing: solo
